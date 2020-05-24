@@ -18,12 +18,15 @@ let launchStatus = document.getElementById("launchStatus");
 
 if (pilotInput === "" || copilotInput === "" || fuelInput === "" || massInput === "") {
     alert("Entry missing. Check that proper launch data is ready");
-    } else if (
-        (!isNaN(pilotInput) || (!isNaN(copilotInput)) || isNaN(Number(fuelInput))) || isNaN(Number(massInput))) {
+    } else (
+        (!isNaN(pilotInput)) || (!isNaN(copilotInput)) || isNaN(Number(fuelInput)) || isNaN(Number(massInput))); {
             alert("You data does meet requirements. Please enter valid responses.");
-    }else{
-        document.getElementById("faultyItems").style.visibility = "visible"
         }
+
+        if  (isNaN(pilotInput) || (isNaN(copilotInput)) || !isNaN(Number(fuelInput) || !isNaN(Number(massInput)))) {
+            document.getElementById("faultyItems").style.visibility = "visible" 
+        }
+ 
 pilotStatus.innerHTML = `Pilot: ${pilotInput} is ready`;
 copilotStatus.innerHTML = `Co-pilot: ${copilotInput} is ready`;
           
